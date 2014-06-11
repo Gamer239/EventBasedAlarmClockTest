@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">EventBasedAlarmClockTest</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world!was cool</string>
     <string name="action_settings">Settings</string>
+    <string name="button_string">Click Me</string>
 
 </resources>
