@@ -6,3 +6,6 @@ build/
 
 .idea/workspace.xml
 .idea/workspace.xml
+.idea/gradle.xml
+app/app.iml
+EventBasedAlarmClockTest.iml
