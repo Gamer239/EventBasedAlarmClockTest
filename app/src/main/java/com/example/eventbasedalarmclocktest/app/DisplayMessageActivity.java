@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class DisplayMessageActivity extends Activity {
 
 
         setContentView(textView);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -31,8 +34,12 @@ public class DisplayMessageActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.display_message, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_activity_actions, menu);
+        //getMenuInflater().inflate(R.menu.display_message, menu);
+
+        //return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -42,9 +49,15 @@ public class DisplayMessageActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            //openSettings();
             return true;
+        } else if ( id == R.id.action_search )
+        {
+            //openSearch();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
 }
